@@ -17,7 +17,7 @@ class Temperature
 
     private static final float KELVIN_OFFSET = 273.15F;
     private static final float FAHRENHEIT_FREEZES_WATER = 32F;
-    private static final float FAHRENHEIT_TO_CELSIUS_RATIO = 5F / 9F;
+    private static final float FAHRENHEIT_TO_CELSIUS = 5F / 9F;
 
     public static Temperature fromKelvin(float degreesKelvin)
     {
@@ -26,7 +26,7 @@ class Temperature
 
     public static Temperature fromFahrenheit(float degreesFahrenheit)
     {
-        return new Temperature(FAHRENHEIT_TO_CELSIUS_RATIO
+        return new Temperature(FAHRENHEIT_TO_CELSIUS
             * (degreesFahrenheit - FAHRENHEIT_FREEZES_WATER));
     }
 
@@ -49,7 +49,7 @@ class Temperature
 
     public float toDegreesFahrenheit()
     {
-        return (1 / FAHRENHEIT_TO_CELSIUS_RATIO)
+        return (1 / FAHRENHEIT_TO_CELSIUS)
             * DEGREES_CELSIUS + FAHRENHEIT_FREEZES_WATER;
     }
 
