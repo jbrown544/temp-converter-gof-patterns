@@ -29,18 +29,20 @@ public class TemperatureConversionWithPatterns
 
     private static AbstractTemperatureConversionTemplate getTemplate()
     {
-        switch (ConsoleUtils.promptForInt(
-            "Enter:"
-            + "\n  1 for the Enhanced Template"
-            + "\n  2 for the Original Template"
-            + "\nYour selection? [1-2]: "))
+        do
         {
-            case 1:
-                return new EnhancedTemperatureConversionTemplate();
+            switch (ConsoleUtils.promptForInt(
+                "Enter:"
+                + "\n  1 for the Enhanced Template"
+                + "\n  2 for the Original Template"
+                + "\nYour selection? [1-2]: "))
+            {
+                case 1:
+                    return new EnhancedTemperatureConversionTemplate();
 
-            default:
-                return new OriginalTemperatureConversionTemplate();
-
-        }
+                case 2:
+                    return new OriginalTemperatureConversionTemplate();
+            }
+        } while (true);
     }
 }
