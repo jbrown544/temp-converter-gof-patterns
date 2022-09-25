@@ -1,1 +1,1 @@
-# temp-converter-gof-patterns
+# Patterns exercise.
