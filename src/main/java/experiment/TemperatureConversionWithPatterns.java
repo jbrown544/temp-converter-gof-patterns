@@ -15,7 +15,7 @@ public class TemperatureConversionWithPatterns
      */
     public static void main(String[] args)
     {
-        AbstractTemperatureConversionTemplate template = getTemplate();
+        AbstractTemperatureConversionTemplate template = createTemplate();
 
         TemperatureConversionStrategy strategy = new TemperatureConversionStrategy();
 
@@ -27,7 +27,7 @@ public class TemperatureConversionWithPatterns
         System.out.println("Have a great day!");
     }
 
-    private static AbstractTemperatureConversionTemplate getTemplate()
+    private static AbstractTemperatureConversionTemplate createTemplate()
     {
         do
         {
