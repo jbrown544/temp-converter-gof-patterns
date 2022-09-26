@@ -19,11 +19,11 @@ class TemperatureConversionStrategy extends AbstractTemperatureScaleConverter
 
     public final void configure(String sourceScale, String targetScale)
     {
-        sourceConverter = getTemperatureConverter(sourceScale);
-        targetConverter = getTemperatureConverter(targetScale);
+        sourceConverter = createTemperatureConverter(sourceScale);
+        targetConverter = createTemperatureConverter(targetScale);
     }
 
-    private AbstractTemperatureScaleConverter getTemperatureConverter(String scale)
+    private AbstractTemperatureScaleConverter createTemperatureConverter(String scale)
     {
         switch (scale)
         {
