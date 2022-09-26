@@ -3,7 +3,7 @@ package experiment;
 /**
  * Original Concrete Temperature Conversion Template.
  *
- * Steps implemented to approximate discussion original.
+ * Steps implemented to approximate pre-refactor original.
  */
 class OriginalTemperatureConversionTemplate extends AbstractTemperatureConversionTemplate
 {
